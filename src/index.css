@@ -27,6 +27,13 @@ body {
  line-height: 1.2;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .header_wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -54,4 +61,5 @@ body {
   font-weight: 700;
   line-height: normal;
   text-transform: capitalize;
+  text-decoration: none;
 }
