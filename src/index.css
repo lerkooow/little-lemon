@@ -53,7 +53,7 @@ body {
 
 .header_link {
   color: #000;
-  font-family: Karla;
+  font-family: 'Karla', sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: normal;
@@ -76,7 +76,11 @@ body {
 .intro {
   background-color: rgba(73, 94, 87, 0.93);
   height: 529px;
-  padding-top: 170px;
+  padding-top: 147.96px;
+}
+
+.info {
+  padding-top: 22.04px;
 }
 
 .intro_title {
@@ -119,4 +123,39 @@ body {
 
 .intro_wrapper {
   display: flex;
+  justify-content: space-between;
+}
+
+input {
+  width: 200px;
+  border-radius: 16px;
+  background-color: rgba(244, 206, 20, 0.93);height: 50px;
+  color: #060606;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 72px;
+}
+
+.intro_b {
+  margin-top: 72px;
+}
+
+.specials {
+  margin-top: 87px;
+}
+
+.specials_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.h2_specials {
+  color: #000;
+  font-family: 'Karla', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: normal;
 }
