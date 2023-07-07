@@ -17,3 +17,17 @@ html {
  max-width: 858px;
  margin: 0 auto;
 }
+
+body {
+ color: #000;
+ font-family: 'Roboto', sans-serif;
+ font-size: 16px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 1.2;
+}
+
+.header_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}

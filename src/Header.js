@@ -5,8 +5,12 @@ import Logo from "./svg/Logo.svg"
 export default function Header() {
     return (
         <header className="header">
-            <img className="header_logo" src={Logo} alt="logo"></img>
-            <Nav />
+            <div className="wrapper">
+                <div className="header_wrapper">
+                    <img className="header_logo" src={Logo} alt="logo"></img>
+                    <Nav />
+                </div>
+            </div>
         </header>
     );
 }
