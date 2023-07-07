@@ -1,6 +1,6 @@
 import './App.css';
 import Header from "./Header"
-// import Main from "./Main"
+import Main from "./Main"
 // import Footer from "./Footer"
 
 import "./index.css"
@@ -11,8 +11,8 @@ function App() {
   return (
     <div>
       <Header />
-      {/* <Main />
-      <Footer /> */}
+      <Main />
+      {/* <Footer /> */}
     </div>
   );
 }

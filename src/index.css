@@ -1,12 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;800&family=Roboto:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;800&family=Markazi+Text:wght@400;700&family=Roboto:wght@400;500;900&display=swap');
 
-
+/* Header and Nav */
 html {
  box-sizing: border-box;
- width: 1440px;
- height: 2829px;
 }
 
+body {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+ }
 
 *, *::before, *::after {
  box-sizing: inherit;
@@ -14,17 +19,8 @@ html {
 
 
 .wrapper {
- max-width: 858px;
- margin: 0 auto;
-}
-
-body {
- color: #000;
- font-family: 'Roboto', sans-serif;
- font-size: 16px;
- font-style: normal;
- font-weight: 400;
- line-height: 1.2;
+  max-width: 858px;
+  margin: 0 auto;
 }
 
 .header {
@@ -32,6 +28,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  background-color: #fff;
 }
 
 .header_wrapper {
@@ -62,4 +59,64 @@ body {
   line-height: normal;
   text-transform: capitalize;
   text-decoration: none;
+}
+
+.header_link:hover, .header_link:focus, .header_link:active {
+  opacity: .75;
+}
+
+.header_logo {
+  width: 218.26px;
+  height: 58px;
+  margin-top: 28px;
+  margin-bottom: 33px;
+}
+
+/* Main */
+.intro {
+  background-color: rgba(73, 94, 87, 0.93);
+  height: 529px;
+  padding-top: 170px;
+}
+
+.intro_title {
+  font-family: 'Roboto', sans-serif;
+  color: rgba(244, 206, 20, 0.93);
+  font-size: 56px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.chicago {
+  font-family: 'Markazi Text', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: normal;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.h1h2 {
+  width: 399px;
+  height: 105px;
+}
+
+.intro_info {
+  font-family: 'Roboto', sans-serif;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140.625%;
+  width: 422px;
+  height: 79px;
+}
+
+.img_intro {
+  width: 360.901px;
+  height: 428.922px;
+  border-radius: 60px;
+}
+
+.intro_wrapper {
+  display: flex;
 }
