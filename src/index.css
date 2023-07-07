@@ -30,4 +30,28 @@ body {
 .header_wrapper {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header_item {
+  margin-right: 28px;
+}
+
+.header_item:last-child {
+  margin-right: 0;
+}
+
+.header_link {
+  color: #000;
+  font-family: Karla;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
 }
