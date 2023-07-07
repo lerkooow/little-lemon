@@ -1,4 +1,9 @@
 import restauranfood from "./icons_assets/restauranfood.jpg"
+import greeksalad from "./icons_assets/greeksalad.jpg"
+import bike from "./icons_assets/Group.svg"
+import bruchetta from "./icons_assets/bruchetta.png"
+import lemondessert from "./icons_assets/lemondessert.jpg"
+
 
 export default function Main() {
     return (
@@ -25,6 +30,66 @@ export default function Main() {
                     <div className="specials_wrapper">
                         <h2 className="h2_specials">Specials</h2>
                         <input className="specials_b" type="button" value="Online Menu"></input>
+                    </div>
+                    <div className="specials_cards">
+                        {/* Card 1 */}
+                        <div className="specials_card">
+                            <div className="specials_card-pic">
+                                <img className="card-img" src={greeksalad} alt="greeksalad"></img>
+                            </div>
+                            <div className="card_wrapper">
+                                <h3 className="specials_card-title">
+                                    Greek salad
+                                </h3>
+                                <h3 className="specials_card-price">$12.99</h3>
+                            </div>
+                            <h4 className="specials_card-info">The famous greek salad of crispy lettuce, peppers,
+                                olives and our Chicago style feta cheese,
+                                garnished with crunchy garlic and rosemary croutons. </h4>
+                            <div className="card_order">
+                                <a className="greeksalad_link" href="/greeksalad">Order a delivery</a>
+                                <img className="bike" src={bike} alt="bike"></img>
+                            </div>
+                        </div>
+                        {/* Card 2 */}
+                        <div className="specials_card">
+                            <div className="specials_card-pic">
+                                <img className="card-img" src={bruchetta} alt="bruchetta"></img>
+                            </div>
+                            <div className="card_wrapper">
+                                <h3 className="specials_card-title">
+                                    Greek salad
+                                </h3>
+                                <h3 className="specials_card-price">$12.99</h3>
+                            </div>
+                            <h4 className="specials_card-info">The famous greek salad of crispy lettuce, peppers,
+                                olives and our Chicago style feta cheese,
+                                garnished with crunchy garlic and rosemary croutons. </h4>
+                            <div className="card_order">
+                                <a className="greeksalad_link" href="/greeksalad">Order a delivery</a>
+                                <img className="bike" src={bike} alt="bike"></img>
+                            </div>
+                        </div>
+                        {/* Card 3 */}
+
+                        <div className="specials_card">
+                            <div className="specials_card-pic">
+                                <img className="card-img" src={lemondessert} alt="lemondessert"></img>
+                            </div>
+                            <div className="card_wrapper">
+                                <h3 className="specials_card-title">
+                                    Greek salad
+                                </h3>
+                                <h3 className="specials_card-price">$12.99</h3>
+                            </div>
+                            <h4 className="specials_card-info">The famous greek salad of crispy lettuce, peppers,
+                                olives and our Chicago style feta cheese,
+                                garnished with crunchy garlic and rosemary croutons. </h4>
+                            <div className="card_order">
+                                <a className="greeksalad_link" href="/greeksalad">Order a delivery</a>
+                                <img className="bike" src={bike} alt="bike"></img>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

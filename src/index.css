@@ -138,7 +138,7 @@ input {
   line-height: normal;
   margin-top: 72px;
 }
-
+/* Specials заголовок+кнопка */
 .intro_b {
   margin-top: 72px;
 }
@@ -158,4 +158,78 @@ input {
   font-size: 40px;
   font-weight: 500;
   line-height: normal;
+}
+
+/* Cards */
+
+.specials_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 34.32px;
+}
+
+
+.specials_card {
+  width: 264.667px;
+  height: 439px;
+  background: #EDEFEE;
+  margin-top: 69px;
+  border-radius: 16px 16px 0px 0px;
+
+}
+
+.card-img {
+  width: 265px;
+  height: 185.258px;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.card_wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.specials_card-title {
+  font-family: 'Markazi Text', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 90%;
+  width: 163.594px;
+  height: 25.462px;
+  margin: 19.32px 70px 0 25.01px;
+}
+
+.specials_card-price {
+  color: #EE9972;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  width: 59.394px;
+  height: 16.682px;
+  margin: 20.19px 22.92px 0 0;
+}
+
+.specials_card-info {
+  color: #495E57;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 22.83px 22.92px 0 25.01px;
+}
+
+.greeksalad_link {
+  color: #333;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.card_order {
+  display: flex;
+  margin: 17.65px 86px 20.19px 25.01px;
+  gap: 10px;
 }
