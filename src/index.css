@@ -29,6 +29,7 @@ body {
   left: 0;
   width: 100%;
   background-color: #fff;
+  z-index: 999;
 }
 
 .header_wrapper {
@@ -365,3 +366,38 @@ input {
 }
 
 /* Footer */
+
+footer {
+  height: 411.648px;
+  background-color: #556962;
+}
+
+.img_footer {
+  width: 173.539px;
+  height: 284.615px;
+  margin-top: 61.38px;
+}
+
+.footer_wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.h3_navigation {
+  color: #F4CE14;
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 89.65px;
+}
+
+.navigation_link {
+  color: #FFF;
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+  text-decoration: none;
+}
