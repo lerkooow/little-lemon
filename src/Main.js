@@ -1,4 +1,3 @@
-import restauranfood from "./icons_assets/restauranfood.jpg"
 import greeksalad from "./icons_assets/greeksalad.jpg"
 import bike from "./icons_assets/Group.svg"
 import bruchetta from "./icons_assets/bruchetta.png"
@@ -7,8 +6,11 @@ import avatar1 from "./icons_assets/avatar1.jpg"
 import avatar2 from "./icons_assets/avatar2.jpg"
 import avatar3 from "./icons_assets/avatar3.jpg"
 import avatar4 from "./icons_assets/avatar4.jpg"
+
 import ReviewList from "./ReviewList"
 import SpecialsList from "./SpecialsList"
+import Intro from "./Intro"
+
 
 
 
@@ -73,21 +75,7 @@ export default function Main() {
     return (
         <main className="main">
             <section className="intro">
-                <div className="wrapper">
-                    <div className="intro_wrapper">
-                        <div className="info">
-                            <div className="h1h2">
-                                <h1 className="intro_title">Little Lemon</h1>
-                                <h2 className="chicago">Chicago</h2>
-                            </div>
-                            <h3 className="intro_info">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua.</h3>
-                            <input className="intro_b" type="button" value="Reserve a Table"></input>
-                        </div>
-                        <img className="img_intro" src={restauranfood} alt="img_intro"></img>
-                    </div>
-                </div>
+                <Intro />
             </section>
             <section className="specials">
                 <div className="wrapper">
