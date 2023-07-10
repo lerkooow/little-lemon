@@ -17,31 +17,32 @@ export default function Main() {
         rating: 4.8,
         avatar: avatar1,
         name: "Mark",
-        review: "Good Place!"
+        review: "Amazing food and friendly staff!"
     },
     {
 
         rating: 4.9,
         avatar: avatar2,
         name: "Elizabeth",
-        review: "Cool!"
+        review: "Cozy ambiance, delicious dishes."
     },
     {
 
-        rating: 4.7,
+        rating: "5.0",
         avatar: avatar3,
         name: "Ben",
-        review: "Good!"
+        review: "Beautiful decor and mouthwatering food."
     },
     {
 
         rating: 4.9,
         avatar: avatar4,
         name: "Liza",
-        review: "Great!"
+        review: "Exquisite flavors and impeccable service."
     }];
 
     const specials = [{
+        id: "greeksalad",
         img: greeksalad,
         title: "Greek Salad",
         price: "$" + 12.99,
@@ -50,7 +51,7 @@ export default function Main() {
         icon: bike
     },
     {
-
+        id: "bruchetta",
         img: bruchetta,
         title: "Bruchetta",
         price: "$" + 5.99,
@@ -60,8 +61,9 @@ export default function Main() {
     },
     {
 
+        id: "lemondessert",
         img: lemondessert,
-        title: "Lemon dessert",
+        title: "Lemon Dessert",
         price: "$" + 5 + ".00",
         info: "This comes straight from grandma'’'s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
         link: "Order a delivery",

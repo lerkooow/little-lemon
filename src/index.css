@@ -196,7 +196,7 @@ input {
   line-height: 90%;
   width: 163.594px;
   height: 25.462px;
-  margin: 19.32px 70px 0 25.01px;
+  margin: 19.32px 6.25px 0 25.01px;
 }
 
 .specials_card-price {
@@ -207,7 +207,7 @@ input {
   line-height: normal;
   width: 59.394px;
   height: 16.682px;
-  margin: 20.19px 22.92px 0 0;
+  margin: 20.19px 10.42px 0 6.25px;
 }
 
 .specials_card-info {
@@ -217,6 +217,8 @@ input {
   font-weight: 400;
   line-height: normal;
   margin: 22.83px 22.92px 0 25.01px;
+  width: 216.736px;
+  height: 120.286px;
 }
 
 .greeksalad_link {
@@ -233,6 +235,7 @@ input {
   margin: 17.65px 86px 20.19px 25.01px;
   gap: 10px;
 }
+
 
 /* Testimonials blocks*/
 
