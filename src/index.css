@@ -17,7 +17,6 @@ body {
  box-sizing: inherit;
 }
 
-
 .wrapper {
   max-width: 858px;
   margin: 0 auto;
@@ -41,7 +40,6 @@ body {
 
 .header_list {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .header_item {
@@ -390,7 +388,8 @@ footer {
   font-size: 20px;
   font-weight: 800;
   line-height: normal;
-  margin-top: 89.65px;
+   margin-top: 89.65px;
+
 }
 
 .navigation_link {
@@ -400,4 +399,20 @@ footer {
   font-weight: 500;
   line-height: 130%;
   text-decoration: none;
+}
+
+/* Madia */
+@media (max-width: 990px) {
+  /*
+  Стили для устройств, у которых ширина viewport меньше или равно 990 пикселей,
+  но больше 770 пикселей.
+  Эти стили подойдут для некоторых мобильных устройств и планшетов
+  */
+}
+
+@media (max-width: 770px) {
+  /*
+  Стили для устройств, у которых ширина viewport меньше или равно 770 пикселей.
+  Это множество мобильных устройств
+  */
 }

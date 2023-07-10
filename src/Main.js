@@ -7,8 +7,8 @@ import avatar2 from "./icons_assets/avatar2.jpg"
 import avatar3 from "./icons_assets/avatar3.jpg"
 import avatar4 from "./icons_assets/avatar4.jpg"
 
-import ReviewList from "./ReviewList"
-import SpecialsList from "./SpecialsList"
+import Review from "./Review"
+import Specials from "./Specials"
 import Intro from "./Intro"
 import Chef from "./Chef"
 
@@ -69,7 +69,7 @@ export default function Main() {
         img: lemondessert,
         title: "Lemon Dessert",
         price: "$" + 5 + ".00",
-        info: "This comes straight from grandma'’'s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
+        info: "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
         link: "Order a delivery",
         icon: bike
     },];
@@ -87,14 +87,20 @@ export default function Main() {
                         <h2 className="h2_specials">Specials</h2>
                         <input className="specials_b" type="button" value="Online Menu"></input>
                     </div>
-                    <SpecialsList specials={specials} />
+                    <div className="specials_cards">
+                        {specials.map((special) => (
+                            <Specials {...special} />
+                        ))}
+                    </div>
                 </div>
             </section>
             <section className="testimonials">
                 <div className="wrapper">
                     <h2 className="h2_testimonials">Testimonials</h2>
                     <div className="testimonials_blocks">
-                        <ReviewList reviews={reviews} />
+                        {reviews.map((review) => (
+                            <Review {...review} />
+                        ))}
                     </div>
                 </div>
             </section>
