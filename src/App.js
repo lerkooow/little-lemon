@@ -1,7 +1,7 @@
 import './App.css';
 import Header from "./Header"
 import Main from "./Main"
-// import Footer from "./Footer"
+import Footer from "./Footer"
 
 import "./index.css"
 import "./reset.css"
@@ -12,7 +12,7 @@ function App() {
     <div>
       <Header />
       <Main />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

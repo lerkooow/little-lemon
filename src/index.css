@@ -100,7 +100,7 @@ body {
   margin-bottom: 15px;
 }
 
-.h1h2 {
+.title_chicago {
   width: 399px;
   height: 105px;
 }
@@ -308,3 +308,60 @@ input {
   margin: 17px 17.79px 8px 24px;
 }
 
+/* Chef */
+
+.chef_title {
+  width: 368.278px;
+  color: rgba(244, 206, 20, 0.93);
+  font-family: 'Markazi Text', sans-serif;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 62.34px 221.16px 0 0;
+}
+
+.chef_chicago {
+  width: 165.873px;
+  color: #333;
+  font-family: 'Markazi Text', sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.chef_text {
+  width: 365.316px;
+  height: 318.792px;
+  color: #556962;
+  text-align: justify;
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 39.6px 51.34px 0 0;
+}
+
+.restChef_img {
+  width: 268.557px;
+  height: 334.633px;
+  margin: 178.17px 0 70.55px 51.34px;
+  z-index: 1;
+}
+
+.MandA_img {
+  width: 272.506px;
+  height: 334.633px;
+  margin: 62.34px 0 0 -133px;
+  z-index: 0;
+}
+
+.chef_wrapper {
+  display: flex;
+}
+
+.chef_img {
+  display: flex;
+}
+
+/* Footer */

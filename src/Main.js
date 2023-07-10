@@ -10,6 +10,8 @@ import avatar4 from "./icons_assets/avatar4.jpg"
 import ReviewList from "./ReviewList"
 import SpecialsList from "./SpecialsList"
 import Intro from "./Intro"
+import Chef from "./Chef"
+
 
 
 
@@ -75,7 +77,9 @@ export default function Main() {
     return (
         <main className="main">
             <section className="intro">
-                <Intro />
+                <div className="wrapper">
+                    <Intro />
+                </div>
             </section>
             <section className="specials">
                 <div className="wrapper">
@@ -92,6 +96,11 @@ export default function Main() {
                     <div className="testimonials_blocks">
                         <ReviewList reviews={reviews} />
                     </div>
+                </div>
+            </section>
+            <section className="chef">
+                <div className="wrapper">
+                    <Chef />
                 </div>
             </section>
         </main>
