@@ -145,6 +145,7 @@ input {
 
 .specials {
   margin-top: 87px;
+  height: 718px;
 }
 
 .specials_wrapper {
@@ -175,7 +176,6 @@ input {
   background: #EDEFEE;
   margin-top: 69px;
   border-radius: 16px 16px 0px 0px;
-
 }
 
 .card-img {
@@ -233,3 +233,75 @@ input {
   margin: 17.65px 86px 20.19px 25.01px;
   gap: 10px;
 }
+
+/* Testimonials blocks*/
+
+.h2_testimonials {
+  color: #333;
+  text-align: center;
+  padding-top: 122px;
+  font-family: 'Markazi Text', sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 66px;
+}
+
+.testimonials {
+  background-color: #F4CE14;
+  height: 590px;
+}
+
+.testimonials_blocks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+}
+
+.testimonials_block {
+  width: 200px;
+  height: 175px;
+  background: #FFF;
+}
+
+.avatar {
+  width: 47px;
+  height: 46px;
+  margin: 13px 12px 0 24px;
+}
+
+.avatar_name {
+  display: flex;
+  align-items: center;
+}
+
+.rating {
+  color: #000;
+  font-family: 'Karla', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 29px 155px 0 24px;
+}
+
+.name {
+  color: #000;
+  font-family: 'Karla', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  margin-right: 62px;
+  margin-top: 5px;
+}
+
+.review {
+  width: 158.209px;
+  height: 46px;
+  color: #000;
+  font-family: 'Karla', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 17px 17.79px 8px 24px;
+}
+
