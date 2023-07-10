@@ -1,7 +1,7 @@
 import restauranfood from "./icons_assets/restauranfood.jpg"
 
 
-export default function Intro() {
+export default function CallToAction() {
     return (
         <div className="intro_wrapper">
             <div className="info">

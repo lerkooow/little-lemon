@@ -1,4 +1,4 @@
-export default function Review({ rating, avatar, name, review }) {
+export default function CustomersSay({ rating, avatar, name, review }) {
     return (
         <div className="testimonials_block">
             <h2 className="rating">{rating}</h2>

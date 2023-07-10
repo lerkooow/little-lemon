@@ -7,44 +7,17 @@ import avatar2 from "./icons_assets/avatar2.jpg"
 import avatar3 from "./icons_assets/avatar3.jpg"
 import avatar4 from "./icons_assets/avatar4.jpg"
 
-import Review from "./Review"
+import CustomersSay from "./CustomersSay"
 import Specials from "./Specials"
-import Intro from "./Intro"
-import Chef from "./Chef"
+import CallToAction from "./CallToAction"
+import Chicago from "./Chicago"
 
 
 
 
 
 export default function Main() {
-    const reviews = [{
-        rating: 4.8,
-        avatar: avatar1,
-        name: "Mark",
-        review: "Amazing food and friendly staff!"
-    },
-    {
-
-        rating: 4.9,
-        avatar: avatar2,
-        name: "Elizabeth",
-        review: "Cozy ambiance, delicious dishes."
-    },
-    {
-
-        rating: "5.0",
-        avatar: avatar3,
-        name: "Ben",
-        review: "Beautiful decor and mouthwatering food."
-    },
-    {
-
-        rating: 4.9,
-        avatar: avatar4,
-        name: "Liza",
-        review: "Exquisite flavors and impeccable service."
-    }];
-
+    // Specials
     const specials = [{
         id: "greeksalad",
         img: greeksalad,
@@ -74,11 +47,40 @@ export default function Main() {
         icon: bike
     },];
 
+    // Reviews
+    const reviews = [{
+        rating: 4.8,
+        avatar: avatar1,
+        name: "Mark",
+        review: "Amazing food and friendly staff!"
+    },
+    {
+
+        rating: 4.9,
+        avatar: avatar2,
+        name: "Elizabeth",
+        review: "Cozy ambiance, delicious dishes."
+    },
+    {
+
+        rating: "5.0",
+        avatar: avatar3,
+        name: "Ben",
+        review: "Beautiful decor and mouthwatering food."
+    },
+    {
+
+        rating: 4.9,
+        avatar: avatar4,
+        name: "Liza",
+        review: "Exquisite flavors and impeccable service."
+    }];
+
     return (
         <main className="main">
             <section className="intro">
                 <div className="wrapper">
-                    <Intro />
+                    <CallToAction />
                 </div>
             </section>
             <section className="specials">
@@ -99,14 +101,14 @@ export default function Main() {
                     <h2 className="h2_testimonials">Testimonials</h2>
                     <div className="testimonials_blocks">
                         {reviews.map((review) => (
-                            <Review {...review} />
+                            <CustomersSay {...review} />
                         ))}
                     </div>
                 </div>
             </section>
-            <section className="chef">
+            <section className="chicago">
                 <div className="wrapper">
-                    <Chef />
+                    <Chicago />
                 </div>
             </section>
         </main>

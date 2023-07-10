@@ -307,9 +307,9 @@ input {
   margin: 17px 17.79px 8px 24px;
 }
 
-/* Chef */
+/* chicago */
 
-.chef_title {
+.chicago_title {
   width: 368.278px;
   color: rgba(244, 206, 20, 0.93);
   font-family: 'Markazi Text', sans-serif;
@@ -319,7 +319,7 @@ input {
   margin: 62.34px 221.16px 0 0;
 }
 
-.chef_chicago {
+.chicago_chicago {
   width: 165.873px;
   color: #333;
   font-family: 'Markazi Text', sans-serif;
@@ -328,7 +328,7 @@ input {
   line-height: normal;
 }
 
-.chef_text {
+.chicago_text {
   width: 365.316px;
   height: 318.792px;
   color: #556962;
@@ -341,7 +341,7 @@ input {
   margin: 39.6px 51.34px 0 0;
 }
 
-.restChef_img {
+.restchicago_img {
   width: 268.557px;
   height: 334.633px;
   margin: 178.17px 0 70.55px 51.34px;
@@ -355,11 +355,11 @@ input {
   z-index: 0;
 }
 
-.chef_wrapper {
+.chicago_wrapper {
   display: flex;
 }
 
-.chef_img {
+.chicago_img {
   display: flex;
 }
 
