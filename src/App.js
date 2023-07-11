@@ -6,7 +6,6 @@ import BookingPage from "./BookingPage"
 
 
 import "./index.css"
-import "./reset.css"
 
 import { Routes, Route } from "react-router-dom";
 

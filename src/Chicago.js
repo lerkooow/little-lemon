@@ -7,7 +7,7 @@ export default function Chicago() {
     return (
         <div className="chicago_info">
             <div className="chicago_wrapper">
-                <div className="title_chicago">
+                <div className="general_chicago">
                     <h2 className="chicago_title">Little Lemon</h2>
                     <h3 className="chicago_chicago">Chicago</h3>
                     <h4 className="chicago_text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.

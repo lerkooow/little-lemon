@@ -1,31 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;800&family=Markazi+Text:wght@400;700&family=Roboto:wght@400;500;900&display=swap');
 
-/* Header and Nav */
-html {
- box-sizing: border-box;
-}
 
-body {
-  color: #000;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.2;
- }
-
-*, *::before, *::after {
- box-sizing: inherit;
+/* General state */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .wrapper {
-  max-width: 858px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
+/* Header and Nav */
+
+/* General panel */
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   background-color: #fff;
   z-index: 999;
@@ -62,6 +53,10 @@ body {
   text-decoration: none;
 }
 
+li {
+  list-style-type: none;
+}
+
 .header_link:hover, .header_link:focus, .header_link:active {
   opacity: .75;
 }
@@ -73,16 +68,17 @@ body {
   margin-bottom: 33px;
 }
 
-/* Main */
+/* Main info*/
+
 .intro {
   background-color: rgba(73, 94, 87, 0.93);
-  height: 529px;
-  padding-top: 147.96px;
+  width: 100%;
+  max-height: 406px;
 }
 
 .info {
-  padding-top: 22.04px;
   max-width: 100%;
+  margin-top: 47px;
 }
 
 .intro_title {
@@ -102,7 +98,7 @@ body {
   margin-bottom: 15px;
 }
 
-.title_chicago {
+.general_chicago {
   width: 100%;
 }
 
@@ -120,13 +116,17 @@ body {
 .img_intro {
   width: 360.901px;
   height: 428.922px;
+  min-width: 280px;
   border-radius: 60px;
+  margin-top: 24.96px;
+  max-width: 100%;
 }
 
 .intro_wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 input {
@@ -139,7 +139,6 @@ input {
   font-size: 18px;
   font-weight: 400;
   line-height: normal;
-  margin-top: 72px;
 }
 /* Specials заголовок+кнопка */
 .intro_b {
@@ -148,12 +147,14 @@ input {
 
 .specials {
   margin-top: 87px;
-  height: 718px;
+  height: 100%;
 }
 
 .specials_wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
 }
 
 .h2_specials {
@@ -167,9 +168,10 @@ input {
 /* Cards */
 
 .specials_cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 34.32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 29.68px;
+  justify-content: space-around;
 }
 
 
@@ -179,6 +181,11 @@ input {
   background: #EDEFEE;
   margin-top: 69px;
   border-radius: 16px 16px 0px 0px;
+  margin-bottom: 76px;
+}
+
+.specials_card:last-child {
+  margin-bottom: 30px;
 }
 
 .card-img {
@@ -239,7 +246,6 @@ input {
   gap: 10px;
 }
 
-
 /* Testimonials blocks*/
 
 .h2_testimonials {
@@ -255,19 +261,26 @@ input {
 
 .testimonials {
   background-color: #F4CE14;
-  height: 590px;
+  min-height: 590px;
 }
 
 .testimonials_blocks {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+
+
 }
 
 .testimonials_block {
   width: 200px;
   height: 175px;
   background: #FFF;
+}
+
+.testimonials_block:last-child {
+  margin-bottom: 30px;
 }
 
 .avatar {
@@ -314,17 +327,15 @@ input {
 /* chicago */
 
 .chicago_title {
-  width: 368.278px;
   color: rgba(244, 206, 20, 0.93);
   font-family: 'Markazi Text', sans-serif;
   font-size: 64px;
   font-weight: 500;
   line-height: normal;
-  margin: 62.34px 221.16px 0 0;
+  margin-top: 62.34px;
 }
 
 .chicago_chicago {
-  width: 165.873px;
   color: #333;
   font-family: 'Markazi Text', sans-serif;
   font-size: 40px;
@@ -334,7 +345,6 @@ input {
 
 .chicago_text {
   width: 365.316px;
-  height: 318.792px;
   color: #556962;
   text-align: justify;
   font-family: 'Karla', sans-serif;
@@ -342,7 +352,7 @@ input {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin: 39.6px 51.34px 0 0;
+  margin-top: 39.6px;
 }
 
 .restchicago_img {
@@ -361,6 +371,7 @@ input {
 
 .chicago_wrapper {
   display: flex;
+  flex-wrap: nowrap;
 }
 
 .chicago_img {
@@ -370,14 +381,16 @@ input {
 /* Footer */
 
 footer {
-  height: 411.648px;
+  /* height: 411.648px; */
   background-color: #556962;
+  max-height: 1000px;
 }
 
 .img_footer {
   width: 173.539px;
   height: 284.615px;
   margin-top: 61.38px;
+  margin-bottom: 65.65px;
 }
 
 .footer_wrapper {
@@ -406,17 +419,69 @@ footer {
 }
 
 /* Madia */
-@media (max-width: 990px) {
-  /*
-  Стили для устройств, у которых ширина viewport меньше или равно 990 пикселей,
-  но больше 770 пикселей.
-  Эти стили подойдут для некоторых мобильных устройств и планшетов
-  */
+
+@media (max-width: 783px) {
+  .intro {
+    max-height: 1000px;
+  }
+
+  .intro_wrapper {
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+  }
+
+  .header_wrapper {
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .footer_wrapper {
+  flex-direction: column;
+  align-content: space-around;
+  }
+  .h3_navigation {
+  margin-top: 20px;
+}
+.footer_link {
+  margin-bottom: 20px;
+}
+.testimonials_blocks {
+  justify-content: space-around;
+}
+.specials_card {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.chicago_wrapper {
+  flex-direction: column;
+  align-items: center;
+}
+.general_chicago {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin-top: 5px;
+  margin-left: 5px;
+  align-items: center;
+}
+.restchicago_img {
+  margin: 178.17px 0 70.55px 0;
+}
+.specials {
+  margin-top: 30px;
+}
+.header_list {
+  flex-direction: column;
+}
+.img_intro {
+  width: 300px;
+  height: 380px;
+}
 }
 
-@media (max-width: 770px) {
-  /*
-  Стили для устройств, у которых ширина viewport меньше или равно 770 пикселей.
-  Это множество мобильных устройств
-  */
+@media (max-width: 354px) {
+  .info {
+    padding-top: 70px;
+  }
 }
