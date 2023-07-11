@@ -29,6 +29,7 @@ body {
   width: 100%;
   background-color: #fff;
   z-index: 999;
+  max-width: 100vw;
 }
 
 .header_wrapper {
@@ -40,6 +41,7 @@ body {
 
 .header_list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .header_item {
@@ -80,6 +82,7 @@ body {
 
 .info {
   padding-top: 22.04px;
+  max-width: 100%;
 }
 
 .intro_title {
@@ -100,8 +103,7 @@ body {
 }
 
 .title_chicago {
-  width: 399px;
-  height: 105px;
+  width: 100%;
 }
 
 .intro_info {
@@ -112,6 +114,7 @@ body {
   line-height: 140.625%;
   width: 422px;
   height: 79px;
+  max-width: 100vw;
 }
 
 .img_intro {
@@ -121,8 +124,9 @@ body {
 }
 
 .intro_wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 100%;
 }
 
 input {
