@@ -17,7 +17,7 @@ export default function Footer() {
         },
         {
             name: "Reservation",
-            href: "/reservation"
+            href: "/booking"
         },
         {
             name: "Order online",

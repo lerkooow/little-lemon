@@ -87,7 +87,9 @@ export default function Main() {
                 <div className="wrapper">
                     <div className="specials_wrapper">
                         <h2 className="h2_specials">Specials</h2>
-                        <input className="specials_b" type="button" value="Online Menu"></input>
+                        <button className="specials_b" type="button" value="Online Menu">
+                            <a href="/menu">Online Menu</a>
+                        </button>
                     </div>
                     <div className="specials_cards">
                         {specials.map((special) => (

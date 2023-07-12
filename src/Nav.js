@@ -13,10 +13,10 @@ export default function Nav() {
     },
     {
         name: "Reservation",
-        href: "/reservation"
+        href: "/booking"
     },
     {
-        name: "Order online",
+        name: "Order Online",
         href: "/order-online"
     },
     {
@@ -30,7 +30,7 @@ export default function Nav() {
         </li>
     )
     return (
-        <nav className="header_nav">
+        <nav className="nav">
             <ul className="header_list">
                 {navbarLink}
             </ul>

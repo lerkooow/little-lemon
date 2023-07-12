@@ -6,6 +6,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+a {
+  color:#000;
 }
 
 .wrapper {
@@ -16,11 +22,8 @@
 /* Header and Nav */
 
 /* General panel */
-.header {
-  width: 100%;
-  background-color: #fff;
-  z-index: 999;
-  max-width: 100vw;
+a:hover, a:focus, a:active {
+  opacity: .75;
 }
 
 .header_wrapper {
@@ -48,17 +51,6 @@
   font-family: 'Karla', sans-serif;
   font-size: 20px;
   font-weight: 700;
-  line-height: normal;
-  text-transform: capitalize;
-  text-decoration: none;
-}
-
-li {
-  list-style-type: none;
-}
-
-.header_link:hover, .header_link:focus, .header_link:active {
-  opacity: .75;
 }
 
 .header_logo {
@@ -72,28 +64,24 @@ li {
 
 .intro {
   background-color: rgba(73, 94, 87, 0.93);
-  width: 100%;
   max-height: 406px;
 }
 
 .info {
-  max-width: 100%;
   margin-top: 47px;
 }
 
-.intro_title {
+.title_info {
   font-family: 'Roboto', sans-serif;
   color: rgba(244, 206, 20, 0.93);
   font-size: 56px;
   font-weight: 500;
-  line-height: normal;
 }
 
 .chicago {
   font-family: 'Markazi Text', sans-serif;
   font-size: 30px;
   font-weight: 500;
-  line-height: normal;
   color: #fff;
   margin-bottom: 15px;
 }
@@ -102,7 +90,7 @@ li {
   width: 100%;
 }
 
-.intro_info {
+.text_info {
   font-family: 'Roboto', sans-serif;
   color: #FFF;
   font-size: 20px;
@@ -116,7 +104,6 @@ li {
 .img_intro {
   width: 360.901px;
   height: 428.922px;
-  min-width: 280px;
   border-radius: 60px;
   margin-top: 24.96px;
   max-width: 100%;
@@ -124,37 +111,35 @@ li {
 
 .intro_wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
-  flex-direction: row;
 }
 
-input {
+button {
   width: 200px;
+  height: 50px;
   border-radius: 16px;
-  background-color: rgba(244, 206, 20, 0.93);height: 50px;
+  background-color: rgba(244, 206, 20, 0.93);
   color: #060606;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
-  font-weight: 400;
-  line-height: normal;
+  border: 0;
+
 }
 /* Specials заголовок+кнопка */
-.intro_b {
+.intro_button {
   margin-top: 72px;
 }
 
 .specials {
   margin-top: 87px;
-  height: 100%;
 }
 
 .specials_wrapper {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
 }
 
 .h2_specials {
@@ -162,7 +147,6 @@ input {
   font-family: 'Karla', sans-serif;
   font-size: 40px;
   font-weight: 500;
-  line-height: normal;
 }
 
 /* Cards */
@@ -184,10 +168,6 @@ input {
   margin-bottom: 76px;
 }
 
-.specials_card:last-child {
-  margin-bottom: 30px;
-}
-
 .card-img {
   width: 265px;
   height: 185.258px;
@@ -196,7 +176,6 @@ input {
 
 .card_wrapper {
   display: flex;
-  justify-content: space-around;
 }
 
 .specials_card-title {
@@ -419,69 +398,109 @@ footer {
 }
 
 /* Madia */
+@media (max-width: 428px) {
+  /* HEADER */
+  .wrapper {
+    width: 395px;
+  }
+  .header {
+    height: 80px;
+  }
+  .burger {
+    display: flex;
+    height: 80px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .header_wrapper {
+    display: none;
+  }
+  .header_logo {
+    width: 147.5px;
+    height: 40px;
+    margin: 0;
+  }
+  .img_burger {
+    width: 35px;
+    height: 25px;
+    margin-right: 88px;
+  }
 
-@media (max-width: 783px) {
+  /* INTRO */
+
   .intro {
-    max-height: 1000px;
+    max-height: 100%;
   }
 
   .intro_wrapper {
-    flex-direction: column;
-    align-content: space-around;
     align-items: center;
   }
 
-  .header_wrapper {
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: stretch;
+  .img_intro {
+    width: 80%;
+    height: 152px;
+    border-radius: 16px;
+    margin-top: 110px;
+
   }
-  .footer_wrapper {
-  flex-direction: column;
-  align-content: space-around;
+
+  .text_info {
+    width: 238px;
+    height: 152px;
+    margin-top: 8px;
   }
-  .h3_navigation {
-  margin-top: 20px;
-}
-.footer_link {
-  margin-bottom: 20px;
-}
-.testimonials_blocks {
-  justify-content: space-around;
-}
-.specials_card {
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-.chicago_wrapper {
-  flex-direction: column;
-  align-items: center;
-}
-.general_chicago {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  margin-top: 5px;
-  margin-left: 5px;
-  align-items: center;
-}
-.restchicago_img {
-  margin: 178.17px 0 70.55px 0;
-}
-.specials {
-  margin-top: 30px;
-}
-.header_list {
-  flex-direction: column;
-}
-.img_intro {
-  width: 300px;
-  height: 380px;
-}
+
+  .intro_button {
+    width:148px;
+    height: 35px;
+    margin-top: 47px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
 }
 
-@media (max-width: 354px) {
-  .info {
-    padding-top: 70px;
+@media (max-width: 767px) {
+  .header_wrapper {
+    display: none;
   }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .header_wrapper {
+    display: none;
+  }
+  .header_logo {
+    margin: 28px 0 20px 20px;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1199px) { 
+  .burger {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .burger {
+    display: none;
+  }
+}
+
+/* BOOKING */
+input[type=date]{
+  width:200px;
+  height: 30px;
+}
+input[type=time]{
+  width:200px;
+  height: 30px;
+}
+.date-time {
+  display: flex;
+}
+
+label {
+  font-size: 56px;
 }
