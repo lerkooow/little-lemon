@@ -2,6 +2,7 @@ import Header from "./Header"
 import Main from "./Main"
 import Footer from "./Footer"
 import BookingPage from "./BookingPage"
+import Reservation from "./Reservation"
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />}></Route>
         <Route path="/booking" element={<BookingPage />}></Route>
+        <Route path="/reservation" element={<Reservation />}></Route>
       </Routes>
       <Footer />
     </div>
