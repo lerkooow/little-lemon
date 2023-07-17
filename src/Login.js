@@ -1,7 +1,7 @@
 /* eslint-disable default-case */
 import { useState } from "react";
 
-export default function Reservation() {
+export default function Login() {
     // State
     const [first, setFirst] = useState("");
     const [last, setLast] = useState("");
@@ -24,7 +24,7 @@ export default function Reservation() {
     const [emailError, setEmailError] = useState("Email is required");
     const [passwordError, setPasswordError] = useState("Password is required");
 
-    const [reservationConfirmed, setReservationConfirmed] = useState(false);
+    const [loginConfirmed, setLoginConfirmed] = useState(false);
 
     const blurHandler = (e) => {
         switch (e.target.name) {
@@ -111,7 +111,7 @@ export default function Reservation() {
         setRequest(e.target.value)
     }
 
-    const continueHandler = () => {
+    const loginHandler = () => {
         if (firstError || lastError || phoneError || emailError || passwordError) {
             setFirstDirty(true);
             setLastDirty(true);
@@ -119,7 +119,7 @@ export default function Reservation() {
             setEmailDirty(true);
             setPasswordDirty(true);
         } else {
-            setReservationConfirmed(true);
+            setLoginConfirmed(true);
 
             // Очищаем форму
             setFirst("");
@@ -172,15 +172,15 @@ export default function Reservation() {
                             <input onChange={e => passwordHandler(e)} value={password} onBlur={e => blurHandler(e)} name="password" type="password" placeholder="Password"></input>
                             {passwordDirty && <div style={{ color: "red" }}>{passwordError}</div>}
                         </div>
-                        {reservationConfirmed && (<div className="notification">Table reserved successfully!</div>)}
+                        {loginConfirmed && (<div className="notification">Login successfully!</div>)}
                     </form>
                     <div className="request">
                         <label>Request</label><br></br>
-                        <textarea className="request_input" onChange={e => requestHandler(e)} value={request} type="text" placeholder="Add a special request (optional)" width={200} height={200}></textarea>
+                        <input className="request_input" onChange={e => requestHandler(e)} value={request} type="text" placeholder="Add a special request (optional)"></input>
                     </div>
                     <div className="reservation_button">
-                        <button className="continue_button" type="button" onClick={continueHandler}>
-                            Continue
+                        <button className="continue_button" type="button" onClick={loginHandler}>
+                            Login
                         </button>
                     </div>
                 </div>

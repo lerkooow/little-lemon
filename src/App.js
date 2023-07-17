@@ -2,7 +2,9 @@ import Header from "./Header"
 import Main from "./Main"
 import Footer from "./Footer"
 import BookingPage from "./BookingPage"
-import Reservation from "./Reservation"
+import Login from "./Login"
+import Agree from "./Agree"
+
 
 
 
@@ -19,7 +21,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />}></Route>
         <Route path="/booking" element={<BookingPage />}></Route>
-        <Route path="/reservation" element={<Reservation />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/agree" element={<Agree />}></Route>
       </Routes>
       <Footer />
     </div>
