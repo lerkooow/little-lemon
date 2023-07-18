@@ -1,5 +1,8 @@
 /* eslint-disable default-case */
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
 
 
 export default function BookingPage() {
@@ -23,6 +26,30 @@ export default function BookingPage() {
     const [time, setTime] = useState("");
     const [number, setNumber] = useState("");
     const [ocassion, setOcassion] = useState("");
+    const [side, setSide] = useState("Inside")
+    const [wishes, setWishes] = useState("")
+
+    const state = {
+        first, last, phone, date, time, number, ocassion, side, wishes
+    }
+
+    const { state: locationState } = useLocation();
+
+    useEffect(() => {
+        if (locationState) {
+            setFirst(locationState.first)
+            setLast(locationState.last)
+            setPhone(locationState.phone)
+            setDate(locationState.date)
+            setTime(locationState.time)
+            setNumber(locationState.number)
+            setOcassion(locationState.ocassion)
+            setSide(locationState.side)
+            setWishes(locationState.wishes)
+        }
+
+    }, [locationState])
+
 
     // State, который отражает были ли мы внутри input
     const [firstDirty, setFirstDirty] = useState(false);
@@ -38,34 +65,6 @@ export default function BookingPage() {
     const [phoneError, setPhoneError] = useState("Phone number is required");
     const [dateError, setDateError] = useState("Date is required");
 
-    // Button
-    const [reservationConfirmed, setReservationConfirmed] = useState(false);
-
-    const letsHandler = () => {
-        if (firstError || lastError || phoneError) {
-            setFirstDirty(true);
-            setLastDirty(true);
-            setPhoneDirty(true);
-            setDateDirty(true);
-        } else {
-            setReservationConfirmed(true);
-
-            // Очищаем форму
-            setFirst("");
-            setLast("");
-            setPhone("");
-            setDate("");
-            setTime("");
-            setNumber("");
-            setOcassion("");
-
-            setFirstDirty(false);
-            setLastDirty(false);
-            setPhoneDirty(false);
-            setDateDirty(false);
-
-        }
-    };
 
     const blurHandler = (e) => {
         switch (e.target.name) {
@@ -141,6 +140,16 @@ export default function BookingPage() {
         setOcassion(e.target.value)
     }
 
+    const wishesHandler = (e) => {
+        setWishes(e.target.value)
+    }
+
+
+    const onOptionChange = e => {
+        setSide(e.target.value)
+    }
+
+
 
     return (
         <main className="booking">
@@ -150,35 +159,65 @@ export default function BookingPage() {
                         <h1 className="h1_booking">Little Lemon</h1>
                         <h2 className="h2_booking">Chicago</h2>
                         <h3 className="h3_booking">Find a table for any occasion</h3>
+                        <h4 className="h4_booking"><span>*</span> Required input</h4>
                     </div>
                     <form className="information">
                         <div className="first-last">
                             <div className="first_name">
-                                <label><span>*</span>First name</label><br></br>
-                                <input onChange={e => firstHandler(e)} value={first} onBlur={e => blurHandler(e)} name="first" type="text" placeholder="First name"></input>
+                                <label>First name<span>*</span></label><br></br>
+                                <input
+                                    onChange={e => firstHandler(e)}
+                                    value={first}
+                                    onBlur={e => blurHandler(e)}
+                                    name="first"
+                                    type="text"
+                                    placeholder="First name">
+                                </input>
                                 {firstDirty && <div style={{ color: "red" }}>{firstError}</div>}
                             </div>
                             <div className="Last_name">
-                                <label><span>*</span>Last name</label><br></br>
-                                <input onChange={e => lastHandler(e)} value={last} onBlur={e => blurHandler(e)} name="last" type="text" placeholder="Last name"></input>
+                                <label>Last name<span>*</span></label><br></br>
+                                <input
+                                    onChange={e => lastHandler(e)}
+                                    value={last}
+                                    onBlur={e => blurHandler(e)}
+                                    name="last" type="text"
+                                    placeholder="Last name">
+                                </input>
                                 {lastDirty && <div style={{ color: "red" }}>{lastError}</div>}
                             </div>
                         </div>
                         <div className="phone_number">
-                            <label><span>*</span>Phone number</label><br></br>
-                            <input onChange={e => phoneHandler(e)} value={phone} onBlur={e => blurHandler(e)} name="phone" className="phone" type="tel" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="1xxxxxxxxxx"></input>
+                            <label>Phone number<span>*</span></label><br></br>
+                            <input
+                                onChange={e => phoneHandler(e)}
+                                value={phone}
+                                onBlur={e => blurHandler(e)}
+                                name="phone"
+                                className="phone"
+                                type="tel"
+                                pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+                                placeholder="1xxxxxxxxxx">
+                            </input>
                             <p>*Phone number is needed to clarify and remind the reservation</p>
                             {phoneDirty && <div style={{ color: "red" }}>{phoneError}</div>}
                         </div>
                         <div className="date-time">
                             <div className="date">
-                                <label for="localdate"><span>*</span>Date</label><br></br>
-                                <input onChange={e => dateHandler(e)} onBlur={e => blurHandler(e)} value={date} type="date" required></input>
+                                <label for="localdate">Date<span>*</span></label><br></br>
+                                <input
+                                    onChange={e => dateHandler(e)}
+                                    onBlur={e => blurHandler(e)}
+                                    value={date} type="date">
+                                </input>
                                 {dateDirty && <div style={{ color: "red" }}>{dateError}</div>}
                             </div>
                             <div className="time">
-                                <label for="time"><span>*</span>Time</label><br></br>
-                                <select onChange={e => timeHandler(e)} value={time} className="time_select">
+                                <label for="time">Time<span>*</span></label><br></br>
+                                <select
+                                    onChange={e => timeHandler(e)}
+                                    value={time}
+                                    className="time_select">
                                     <optgroup label="Time">
                                         {timeSelect}
                                     </optgroup>
@@ -187,8 +226,11 @@ export default function BookingPage() {
                             </div>
                         </div>
                         <div className="number">
-                            <label for="number"><span>*</span>Number of Diners</label><br></br>
-                            <select onChange={e => numberHandler(e)} value={number} className="number">
+                            <label for="number">Number of Diners<span>*</span></label><br></br>
+                            <select
+                                onChange={e => numberHandler(e)}
+                                value={number}
+                                className="number">
                                 <optgroup label="Number">
                                     {numberSelect}
                                 </optgroup>
@@ -196,8 +238,11 @@ export default function BookingPage() {
 
                         </div>
                         <div className="ocassion">
-                            <label for="occasion"><span>*</span>Occasion</label><br></br>
-                            <select onChange={e => ocassionHandler(e)} value={ocassion} className="occasion">
+                            <label for="occasion">Occasion<span>*</span></label><br></br>
+                            <select
+                                onChange={e => ocassionHandler(e)}
+                                value={ocassion}
+                                className="occasion">
                                 <optgroup label="Occasion">
                                     {occasionSelect}
                                 </optgroup>
@@ -205,22 +250,41 @@ export default function BookingPage() {
 
                         </div>
                         <div className="radio">
-                            <input name="side" type="radio" placeholder="Inside" checked></input>
-                            <label className="radio1" for="inside">Inside</label><br></br>
-                            <input name="side" type="radio" placeholder="Outside"></input>
-                            <label className="radio1" for="outside">Outside</label><br></br>
-
+                            <input id="inside"
+                                value="Inside"
+                                name="side"
+                                type="radio"
+                                checked={side === "Inside"}
+                                onChange={onOptionChange}>
+                            </input>
+                            <label className="radio1">Inside</label><br></br>
+                            <input
+                                id="outside"
+                                value="Outside"
+                                name="side"
+                                type="radio"
+                                checked={side === "Outside"}
+                                onChange={onOptionChange}>
+                            </input>
+                            <label className="radio1">Outside</label><br></br>
                         </div>
                         <div className="wishes">
                             <label>Wishes</label><br></br>
-                            <input className="wishes_input" type="text" placeholder="Add a wishes (optional)"></input>
+                            <input
+                                onChange={e => wishesHandler(e)}
+                                value={wishes}
+                                className="wishes_input"
+                                type="text"
+                                placeholder="Add a wishes (optional)">
+                            </input>
                         </div>
                         <div className="booking_button">
-                            <button onClick={letsHandler} className="go_button" type="button">
-                                <a href="\agree">Lets go</a>
+                            <button
+                                className="go_button"
+                                type="button">
+                                <Link state={state} to="/agree">Lets go</Link>
                             </button>
                         </div>
-                        {reservationConfirmed && (<div className="notification"></div>)}
                     </form>
                 </div>
             </div >
