@@ -138,15 +138,15 @@ export default function Login() {
 
 
     return (
-        <main className="reservation">
+        <main className="login">
             <div className="wrapper">
                 <div className="wrapper_color">
-                    <div className="title_reservation">
-                        <h1 className="h1_reservation">Little Lemon</h1>
-                        <h2 className="h2_reservation">Chicago</h2>
-                        <h3 className="h3_reservation">Sign in to collect points</h3>
+                    <div className="title_login">
+                        <h1 className="h1_login">Little Lemon</h1>
+                        <h2 className="h2_login">Chicago</h2>
+                        <h3 className="h3_login">Sign in to collect points</h3>
                     </div>
-                    <form className="information_reservation">
+                    <form className="information_login">
                         <div className="first_name">
                             <label>First name</label><br></br>
                             <input onChange={e => firstHandler(e)} value={first} onBlur={e => blurHandler(e)} name="first" type="text" placeholder="First name"></input>
@@ -178,8 +178,12 @@ export default function Login() {
                         <label>Request</label><br></br>
                         <input className="request_input" onChange={e => requestHandler(e)} value={request} type="text" placeholder="Add a special request (optional)"></input>
                     </div>
-                    <div className="reservation_button">
-                        <button className="continue_button" type="button" onClick={loginHandler}>
+                    <div className="login_button">
+                        <button
+                            aria-label="On Click"
+                            className="login_b"
+                            type="button"
+                            onClick={loginHandler}>
                             Login
                         </button>
                     </div>

@@ -12,8 +12,8 @@ export default function Agree() {
                 <div className="wrapper_color">
                     <div className="back_button">
                         <button
-
-                            className="go_button"
+                            aria-label="On Click"
+                            className="back_b"
                             type="button">
                             <Link state={location.state} to="/booking">Back</Link>
                         </button>
@@ -23,7 +23,7 @@ export default function Agree() {
                         <h2 className="h2_agree">Chicago</h2>
                         <h3 className="h3_agree">To reserve a table, please check the details below</h3>
                     </div>
-                    <div className="date_info">
+                    <div className="data_info">
                         <h2 className="first_agree">First name: <p className="data">{location.state?.first}</p></h2>
                         <h2 className="last_agree">Last name: <p className="data">{location.state?.last}</p></h2>
                         <h2 className="phone_agree">Phone number: <p className="data">{location.state?.phone}</p></h2>

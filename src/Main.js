@@ -1,3 +1,6 @@
+import { useState } from "react";
+
+
 import greeksalad from "./icons_assets/greeksalad.jpg"
 import bike from "./icons_assets/Group.svg"
 import bruchetta from "./icons_assets/bruchetta.png"
@@ -11,9 +14,6 @@ import CustomersSay from "./CustomersSay"
 import Specials from "./Specials"
 import CallToAction from "./CallToAction"
 import Chicago from "./Chicago"
-
-
-
 
 
 export default function Main() {
@@ -77,7 +77,7 @@ export default function Main() {
     }];
 
     return (
-        <main className="main">
+        <>
             <section className="intro">
                 <div className="wrapper">
                     <CallToAction />
@@ -86,16 +86,20 @@ export default function Main() {
             <section className="specials">
                 <div className="wrapper">
                     <div className="specials_wrapper">
-                        <h2 className="h2_specials">Specials</h2>
-                        <button className="specials_b" type="button" value="Online Menu">
+                        <h2 className="h2_specials">This weeks specials!</h2>
+                        <button
+                            aria-label="On Click"
+                            className="specials_b"
+                            type="button"
+                            value="Online Menu">
                             <a href="/menu">Online Menu</a>
                         </button>
                     </div>
-                    <div className="specials_cards">
+                    <article className="specials_cards">
                         {specials.map((special) => (
                             <Specials {...special} />
                         ))}
-                    </div>
+                    </article>
                 </div>
             </section>
             <section className="testimonials">
@@ -113,6 +117,6 @@ export default function Main() {
                     <Chicago />
                 </div>
             </section>
-        </main>
+        </>
     );
 }

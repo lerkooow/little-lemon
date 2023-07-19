@@ -11,7 +11,11 @@ export default function CallToAction() {
                 <h3 className="text_info">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod tempor incididunt
                     ut labore et dolore magna aliqua.</h3>
-                <button className="intro_button" type="button" value="Reserve a Table">
+                <button
+                    aria-label="On Click"
+                    className="intro_button"
+                    type="button"
+                    value="Reserve a Table">
                     <a href="/booking">Reserve a Table</a>
                 </button>
             </div>
