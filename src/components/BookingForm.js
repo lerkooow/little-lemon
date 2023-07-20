@@ -23,7 +23,7 @@ export default function BookingForm() {
         return ["13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"]
     }
 
-    function updateTimes(state, action) {
+    function updateTimes(action) {
 
         const slots = fetchAPI(new Date(action.date));
 
@@ -42,7 +42,7 @@ export default function BookingForm() {
     const timeSelect = availableTimes.map((time) =>
         <option key={time}>{time}</option>
     )
-    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     const numberSelect = numbers.map((number) =>
         <option key={number}>{number}</option>
     )
@@ -297,7 +297,7 @@ export default function BookingForm() {
                     onChange={e => ocassionHandler(e)}
                     value={ocassion}
                     className="occasion">
-                    <optgroup label="occasion">
+                    <optgroup label="Occasion">
                         {occasionSelect}
                     </optgroup>
                 </select>

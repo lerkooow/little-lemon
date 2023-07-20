@@ -2,11 +2,23 @@ import "../style/AgreePage.css"
 
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-// import { submitAPI } from "../API";
+import { submitAPI } from "../API";
+import { useState } from "react";
+
 
 export default function AgreePage() {
 
     const location = useLocation();
+
+    const [book, setBook] = useState(true);
+
+    const BookSubmit = () => {
+        submitAPI(location);
+        if (book) {
+            setBook(false);
+        }
+    }
+
 
     return (
         <main className="agree">
@@ -47,7 +59,18 @@ export default function AgreePage() {
                         <h2 className="h2_agree_text">If all details are correct, complete your booking</h2>
                     </div>
                     <div className="agree_button">
-                        <input type="submit" className="agree_b" value="Book"></input>
+                        {/* <button onClick={BookSubmit} type="submit" className="agree_b" value="Book">{book}</button> */}
+                        {book ? (
+                            <button
+                                onClick={BookSubmit}
+                                className="go_button"
+                                type="submit"
+                                aria-label="On Click"
+                                value={book}>Book
+                            </button>
+                        ) : (
+                            <p className="text_submit">Thanks for choosing, {location.state?.first}! See you {location.state?.date} at {location.state?.time}</p>
+                        )}
                     </div>
                 </div>
             </div>
