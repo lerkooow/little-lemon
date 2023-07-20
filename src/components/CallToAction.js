@@ -1,4 +1,6 @@
-import restauranfood from "./icons_assets/restauranfood.jpg"
+import "../style/CallToAction.css"
+
+import restauranfood from "../icons_assets/restauranfood.jpg"
 
 export default function CallToAction() {
     return (

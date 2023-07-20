@@ -1,7 +1,9 @@
 /* eslint-disable default-case */
+import "../style/LoginPage.css"
+
 import { useState } from "react";
 
-export default function Login() {
+export default function LoginPage() {
     // State
     const [first, setFirst] = useState("");
     const [last, setLast] = useState("");
@@ -145,37 +147,37 @@ export default function Login() {
                         <h1 className="h1_login">Little Lemon</h1>
                         <h2 className="h2_login">Chicago</h2>
                         <h3 className="h3_login">Sign in to collect points</h3>
+                        <h4 className="h4_booking"><span>*</span> Required input</h4>
                     </div>
                     <form className="information_login">
                         <div className="first_name">
-                            <label>First name</label><br></br>
+                            <label htmlFor="first">First name<span>*</span></label><br></br>
                             <input onChange={e => firstHandler(e)} value={first} onBlur={e => blurHandler(e)} name="first" type="text" placeholder="First name"></input>
                             {firstDirty && <div style={{ color: "red" }}>{firstError}</div>}
                         </div>
                         <div className="Last_name">
-                            <label>Last name</label><br></br>
+                            <label htmlFor="last">Last name<span>*</span></label><br></br>
                             <input onChange={e => lastHandler(e)} value={last} onBlur={e => blurHandler(e)} name="last" type="text" placeholder="Last name"></input>
                             {lastDirty && <div style={{ color: "red" }}>{lastError}</div>}
                         </div>
                         <div className="phone_number">
-                            <label>Phone number</label><br></br>
+                            <label htmlFor="phone">Phone number<span>*</span></label><br></br>
                             <input onChange={e => phoneHandler(e)} value={phone} onBlur={e => blurHandler(e)} name="phone" type="text" placeholder="Phone number"></input>
                             {phoneDirty && <div style={{ color: "red" }}>{phoneError}</div>}
                         </div>
                         <div className="email">
-                            <label>Email</label><br></br>
+                            <label htmlFor="email">Email<span>*</span></label><br></br>
                             <input onChange={e => emailHandler(e)} value={email} onBlur={e => blurHandler(e)} name="email" type="text" placeholder="Email"></input>
                             {emailDirty && <div style={{ color: "red" }}>{emailError}</div>}
                         </div>
                         <div className="password">
-                            <label>Password</label><br></br>
+                            <label htmlFor="password">Password<span>*</span></label><br></br>
                             <input onChange={e => passwordHandler(e)} value={password} onBlur={e => blurHandler(e)} name="password" type="password" placeholder="Password"></input>
                             {passwordDirty && <div style={{ color: "red" }}>{passwordError}</div>}
                         </div>
-                        {loginConfirmed && (<div className="notification">Login successfully!</div>)}
                     </form>
                     <div className="request">
-                        <label>Request</label><br></br>
+                        <label htmlFor="request">Request</label><br></br>
                         <input className="request_input" onChange={e => requestHandler(e)} value={request} type="text" placeholder="Add a special request (optional)"></input>
                     </div>
                     <div className="login_button">
@@ -187,6 +189,7 @@ export default function Login() {
                             Login
                         </button>
                     </div>
+                    {loginConfirmed && (<div className="notification">Login successfully!</div>)}
                 </div>
             </div >
         </main >

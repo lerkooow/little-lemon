@@ -1,0 +1,90 @@
+/* AGREE */
+
+.agree {
+    background-color:#495E57;
+    padding: 20px;
+  }
+
+  .back_b {
+    width: 50px;
+    border-radius:50%;
+    margin: 20px 0 30px 50px
+  }
+
+  .title_agree {
+    margin: 0 50px;
+  }
+
+  .h1_agree {
+    font-family: 'Markazi Text', sans-serif;
+    color: rgba(244, 206, 20, 0.93);
+    font-size: 80px;
+    font-weight: 500;
+  }
+
+  .h2_agree {
+    font-family: 'Markazi Text', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 15px;
+  }
+
+  .h3_agree {
+    font-family: 'Markazi Text', sans-serif;
+    color: #000;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 140.625%;
+  }
+
+  .data_info {
+    margin: 0 50px;
+  }
+
+  p.data{
+    font-size: 50px;
+    font-family: 'Markazi Text', sans-serif;
+    color:#495E57;
+  }
+
+  div.operator {
+    border: 1px solid #000;
+    margin: 50px;
+    padding: 10px;
+  }
+
+  .question {
+    font-family: 'Markazi Text', sans-serif;
+    color: #000;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 140.625%;
+  }
+
+  .h2_agree_text {
+    text-align: center;
+    color: #495E57;
+    font-size: 40px;
+  }
+
+  .agree_button {
+    display: flex;
+    justify-content: center;
+  }
+
+  button.back, button.agree_b {
+    margin: 20px 50px;
+  }
+
+  input[type="submit"] {
+    width: 200px;
+    height: 50px;
+    border-radius: 16px;
+    background-color: rgba(244, 206, 20, 0.93);
+    color: #060606;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    border: 0;
+    margin: 20px 50px;
+  }

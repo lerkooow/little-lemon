@@ -1,0 +1,32 @@
+/* FOOTER */
+.footer_wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 50px;
+  }
+
+  .img_footer {
+    width: 173.539px;
+    height: 284.615px;
+    margin: 61.38px 0 65.65px 0;
+  }
+
+  .h3_navigation {
+    color: #F4CE14;
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: normal;
+    margin-top: 89.65px;
+
+  }
+
+  .navigation_link {
+    color: #FFF;
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 130%;
+    text-decoration: none;
+  }

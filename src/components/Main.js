@@ -1,20 +1,16 @@
-import { useState } from "react";
-
-
-import greeksalad from "./icons_assets/greeksalad.jpg"
-import bike from "./icons_assets/Group.svg"
-import bruchetta from "./icons_assets/bruchetta.png"
-import lemondessert from "./icons_assets/lemondessert.jpg"
-import avatar1 from "./icons_assets/avatar1.jpg"
-import avatar2 from "./icons_assets/avatar2.jpg"
-import avatar3 from "./icons_assets/avatar3.jpg"
-import avatar4 from "./icons_assets/avatar4.jpg"
+import greeksalad from "../icons_assets/greeksalad.jpg"
+import bike from "../icons_assets/Group.svg"
+import bruchetta from "../icons_assets/bruchetta.png"
+import lemondessert from "../icons_assets/lemondessert.jpg"
+import avatar1 from "../icons_assets/avatar1.jpg"
+import avatar2 from "../icons_assets/avatar2.jpg"
+import avatar3 from "../icons_assets/avatar3.jpg"
+import avatar4 from "../icons_assets/avatar4.jpg"
 
 import CustomersSay from "./CustomersSay"
-import Specials from "./Specials"
-import CallToAction from "./CallToAction"
-import Chicago from "./Chicago"
-
+import SpecialsCard from "../components/SpecialsCard"
+import CallToAction from "../components/CallToAction"
+import Chicago from "../components/Chicago"
 
 export default function Main() {
     // Specials
@@ -97,7 +93,7 @@ export default function Main() {
                     </div>
                     <article className="specials_cards">
                         {specials.map((special) => (
-                            <Specials {...special} />
+                            <SpecialsCard {...special} />
                         ))}
                     </article>
                 </div>

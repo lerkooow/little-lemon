@@ -1,4 +1,6 @@
-import BookingForm from "./BookingForm"
+import "../style/BookingPage.css"
+
+import BookingForm from "../components/BookingForm"
 
 
 export default function BookingPage() {

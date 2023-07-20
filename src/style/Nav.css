@@ -1,0 +1,30 @@
+.nav_list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .nav_item {
+    margin-right: 28px;
+  }
+
+  .nav_item:last-child {
+    margin-right: 0;
+  }
+
+  .nav_link {
+    color: #000;
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  /* Decoration link */
+
+  a:focus, a:active {
+    opacity: .75;
+  }
+
+  a:hover {
+    opacity: .75;
+    text-decoration: underline;
+  }

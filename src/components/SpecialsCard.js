@@ -1,4 +1,6 @@
-export default function Review({ id, img, title, price, info, link, icon }) {
+import "../style/SpecialsCard.css"
+
+export default function SpecialsCard({ id, img, title, price, info, link, icon }) {
     return (
         <div className="specials_card">
             <div className="specials_card-img">

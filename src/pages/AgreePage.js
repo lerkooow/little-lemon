@@ -1,8 +1,10 @@
+import "../style/AgreePage.css"
+
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+// import { submitAPI } from "../API";
 
-
-export default function Agree() {
+export default function AgreePage() {
 
     const location = useLocation();
 
@@ -37,9 +39,9 @@ export default function Agree() {
                     <div className="operator">
                         <h4 className="question">Do you need a call from the operator to clarify the details of the reservation?</h4>
                         <input name="operator" type="radio" placeholder="Yes"></input>
-                        <label className="radio2">Yes</label><br></br>
+                        <label htmlFor="radio" className="radio2">Yes</label><br></br>
                         <input name="operator" type="radio" placeholder="No" checked></input>
-                        <label className="radio2">No</label><br></br>
+                        <label htmlFor="radio" className="radio2">No</label><br></br>
                     </div>
                     <div className="agree_text">
                         <h2 className="h2_agree_text">If all details are correct, complete your booking</h2>

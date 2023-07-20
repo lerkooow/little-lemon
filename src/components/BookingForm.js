@@ -1,14 +1,45 @@
 /* eslint-disable default-case */
-import { useState, useEffect } from "react";
+import "../style/BookingForm.css"
+
+import { useState, useEffect, useReducer } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-
+import { fetchAPI } from "../API";
 
 
 export default function BookingForm() {
 
-    const times = ["13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"]
-    const timeSelect = times.map((time) =>
+    const [first, setFirst] = useState("");
+    const [last, setLast] = useState("");
+    const [phone, setPhone] = useState("");
+    const [date, setDate] = useState("");
+    const [time, setTime] = useState("13:00");
+    const [number, setNumber] = useState("1");
+    const [ocassion, setOcassion] = useState("Birthday");
+    const [side, setSide] = useState("Inside")
+    const [wishes, setWishes] = useState("")
+
+    function initializeTimes() {
+        return ["13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"]
+    }
+
+    function updateTimes(state, action) {
+
+        const slots = fetchAPI(new Date(action.date));
+
+        return slots;
+
+    }
+    useEffect(() => {
+        // а
+        if (date) {
+            setAvailableTimes({ date });
+        }
+    }, [date])
+
+
+    const [availableTimes, setAvailableTimes] = useReducer(updateTimes, initializeTimes())
+    const timeSelect = availableTimes.map((time) =>
         <option key={time}>{time}</option>
     )
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
@@ -20,15 +51,6 @@ export default function BookingForm() {
         <option key={occasion}>{occasion}</option>
     )
 
-    const [first, setFirst] = useState("");
-    const [last, setLast] = useState("");
-    const [phone, setPhone] = useState("");
-    const [date, setDate] = useState("");
-    const [time, setTime] = useState("13:00");
-    const [number, setNumber] = useState("1");
-    const [ocassion, setOcassion] = useState("Birthday");
-    const [side, setSide] = useState("Inside")
-    const [wishes, setWishes] = useState("")
 
     const state = {
         first, last, phone, date, time, number, ocassion, side, wishes
@@ -82,6 +104,7 @@ export default function BookingForm() {
     const [lastDirty, setLastDirty] = useState(false);
     const [phoneDirty, setPhoneDirty] = useState(false);
     const [dateDirty, setDateDirty] = useState(false);
+    console.log("🚀 ~ file: BookingForm.js:85 ~ BookingForm ~ dateDirty:", dateDirty)
 
 
 
@@ -90,9 +113,13 @@ export default function BookingForm() {
     const [lastError, setLastError] = useState("Last name is required");
     const [phoneError, setPhoneError] = useState("Phone number is required");
     const [dateError, setDateError] = useState("Date is required");
+    console.log("🚀 ~ file: BookingForm.js:93 ~ BookingForm ~ dateError:", dateError)
+
+
 
 
     const blurHandler = (e) => {
+        console.log("🚀 ~ file: BookingForm.js:101 ~ blurHandler ~ e.target.name:", e.target.name)
         switch (e.target.name) {
             case "first":
                 setFirstDirty(true)
@@ -147,11 +174,15 @@ export default function BookingForm() {
 
     const dateHandler = (e) => {
         setDate(e.target.value);
+        console.log("🚀 ~ file: BookingForm.js:176 ~ dateHandler ~ e.target.value:", e.target.value)
+
         if (!e.target.value) {
             setDateError("Date is required");
+            console.log("d")
         } else {
             setDateError("");
         }
+
     };
 
     const timeHandler = (e) => {
@@ -181,7 +212,7 @@ export default function BookingForm() {
         <form data-testid="form" className="information">
             <div className="first-last">
                 <div className="first_name">
-                    <label>First name<span>*</span></label><br></br>
+                    <label htmlFor="first">First name<span>*</span></label><br></br>
                     <input
                         data-testid="first"
                         onChange={e => firstHandler(e)}
@@ -194,7 +225,7 @@ export default function BookingForm() {
                     {firstDirty && <div data-testid="error1" style={{ color: "red" }}>{firstError}</div>}
                 </div>
                 <div className="Last_name">
-                    <label>Last name<span>*</span></label><br></br>
+                    <label htmlFor="last">Last name<span>*</span></label><br></br>
                     <input
                         data-testid="last"
                         onChange={e => lastHandler(e)}
@@ -208,7 +239,7 @@ export default function BookingForm() {
                 </div>
             </div>
             <div className="phone_number">
-                <label>Phone number<span>*</span></label><br></br>
+                <label htmlFor="phone">Phone number<span>*</span></label><br></br>
                 <input
                     data-testid="phone"
                     onChange={e => phoneHandler(e)}
@@ -227,6 +258,7 @@ export default function BookingForm() {
                 <div className="date">
                     <label htmlFor="localdate">Date<span>*</span></label><br></br>
                     <input
+                        name="date"
                         className="date"
                         onChange={e => dateHandler(e)}
                         onBlur={e => blurHandler(e)}
@@ -262,11 +294,10 @@ export default function BookingForm() {
             <div className="ocassion">
                 <label htmlFor="occasion">Occasion<span>*</span></label><br></br>
                 <select
-
                     onChange={e => ocassionHandler(e)}
                     value={ocassion}
                     className="occasion">
-                    <optgroup label="Occasion">
+                    <optgroup label="occasion">
                         {occasionSelect}
                     </optgroup>
                 </select>
@@ -281,7 +312,7 @@ export default function BookingForm() {
                     checked={side === "Inside"}
                     onChange={onOptionChange}>
                 </input>
-                <label className="radio1">Inside</label><br></br>
+                <label htmlFor="radio" className="radio1">Inside</label><br></br>
                 <input
                     id="outside"
                     value="Outside"
@@ -290,10 +321,10 @@ export default function BookingForm() {
                     checked={side === "Outside"}
                     onChange={onOptionChange}>
                 </input>
-                <label className="radio1">Outside</label><br></br>
+                <label htmlFor="radio" className="radio1">Outside</label><br></br>
             </div>
             <div className="wishes">
-                <label>Wishes</label><br></br>
+                <label htmlFor="wishes">Wishes</label><br></br>
                 <input
                     onChange={e => wishesHandler(e)}
                     value={wishes}

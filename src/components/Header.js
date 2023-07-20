@@ -1,5 +1,7 @@
-import Nav from "./Nav"
-import Logo from "./icons_assets/Logo.svg"
+import "../style/Header.css"
+
+import Nav from "../components/Nav"
+import Logo from "../icons_assets/Logo.svg"
 
 export default function Header() {
     return (

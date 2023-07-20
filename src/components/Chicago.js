@@ -1,5 +1,7 @@
-import marioandadrian from "./icons_assets/AandM2.png"
-import chicago from "./icons_assets/chef1.png"
+import "../style/Chicago.css"
+
+import marioandadrian from "../icons_assets/AandM2.png"
+import chicago from "../icons_assets/chef1.png"
 
 
 

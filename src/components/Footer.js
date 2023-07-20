@@ -1,4 +1,6 @@
-import restaurant from "./icons_assets/restaurant.png"
+import "../style/Footer.css"
+
+import restaurant from "../icons_assets/restaurant.png"
 
 
 export default function Footer() {

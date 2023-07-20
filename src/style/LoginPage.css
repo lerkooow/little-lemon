@@ -1,0 +1,73 @@
+/* LOGIN */
+
+.login {
+    background-color:#495E57;
+    padding: 20px
+  }
+
+  .title_login {
+    margin: 0 50px;
+  }
+
+  .h1_login{
+    font-family: 'Markazi Text', sans-serif;
+    color: rgba(244, 206, 20, 0.93);
+    font-size: 80px;
+    font-weight: 500;
+    padding-top: 20px;
+  }
+
+  .h2_login {
+    font-family: 'Markazi Text', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 15px;
+  }
+
+  .h3_login {
+    font-family: 'Markazi Text', sans-serif;
+    color: #000;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 140.625%;
+    width: 422px;
+    max-width: 100%;
+  }
+
+  .information_login {
+    margin: 29px 50px;
+  }
+
+  input[type=password] {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #999;
+    font-size: 18px;
+    border-radius: 5px;
+    letter-spacing: 0.06em;
+    padding: 0 25px;
+    margin: 10px 0 17px 0;
+  }
+
+  div.request {
+    margin: 0 50px;
+  }
+
+  input[type=text].request_input {
+    width: 100%;
+    height: 210px;
+  }
+
+  .login_button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .notification {
+    font-family: 'Markazi Text', sans-serif;
+    color: rgba(244, 206, 20, 0.93);
+    font-size: 60px;
+    font-weight: 500;
+    text-align: center;
+  }

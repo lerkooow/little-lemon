@@ -1,3 +1,5 @@
+import "../style/CustomersSay.css"
+
 export default function CustomersSay({ rating, avatar, name, review }) {
     return (
         <div className="testimonials_block">

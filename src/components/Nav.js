@@ -1,3 +1,6 @@
+import "../style/Nav.css"
+
+
 export default function Nav() {
     const navbars = [{
         name: "Home",
@@ -25,13 +28,13 @@ export default function Nav() {
     }
     ];
     const navbarLink = navbars.map((navbar) =>
-        <li className="header_item">
-            <a className="header_link" href={navbar.href}>{navbar.name}</a>
+        <li className="nav_item">
+            <a className="nav_link" href={navbar.href}>{navbar.name}</a>
         </li>
     )
     return (
         <nav className="nav">
-            <ul className="header_list">
+            <ul className="nav_list">
                 {navbarLink}
             </ul>
         </nav>

@@ -1,17 +1,12 @@
-import Header from "./Header"
-import Footer from "./Footer"
-import BookingPage from "./BookingPage"
-import Login from "./Login"
-import Agree from "./Agree"
-
-
-
-
-import "./index.css"
-
+import '../src/style/index.css';
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./HomePage"
 
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import BookingPage from "../src/pages/BookingPage"
+import LoginPage from "../src/pages/LoginPage"
+import AgreePage from "../src/pages/AgreePage"
+import HomePage from "../src/pages/HomePage"
 
 
 function App() {
@@ -21,8 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/booking" element={<BookingPage />}></Route>
-        <Route path="/agree" element={<Agree />}></Route>
-        <Route path="/login" element={<Login />}></Route>
+        <Route path="/agree" element={<AgreePage />}></Route>
+        <Route path="/login" element={<LoginPage />}></Route>
       </Routes>
       <Footer />
     </div>

@@ -1,0 +1,100 @@
+/* SPECIALS */
+
+.specials {
+    margin-top: 87px;
+  }
+
+  .specials_wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    gap: 20px;
+
+  }
+
+  .h2_specials {
+    color: #000;
+    font-family: 'Karla', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  .specials_b {
+    width: 23.81%;
+  }
+
+  /* Cards */
+
+  .specials_cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 29.68px;
+    justify-content: space-around;
+  }
+
+  .specials_card {
+    width: 264.667px;
+    height: 439px;
+    background: #EDEFEE;
+    border-radius: 16px 16px 0px 0px;
+    margin: 69px 0 76px 0;
+  }
+
+  .card-img {
+    width: 265px;
+    height: 185.258px;
+    border-radius: 16px 16px 0px 0px;
+  }
+
+  .card_wrapper {
+    display: flex;
+  }
+
+  .specials_card-title {
+    font-family: 'Markazi Text', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 90%;
+    width: 163.594px;
+    height: 25.462px;
+    margin: 19.32px 6.25px 0 25.01px;
+  }
+
+  .specials_card-price, .specials_card-price_tel {
+    color: #EE9972;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    width: 59.394px;
+    height: 16.682px;
+    margin: 20.19px 10.42px 0 6.25px;
+  }
+
+  .specials_card-info {
+    color: #495E57;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 22.83px 22.92px 0 25.01px;
+    width: 216.736px;
+    height: 120.286px;
+  }
+
+  .card_order {
+    display: flex;
+    margin: 17.65px 86px 20.19px 25.01px;
+    gap: 10px;
+  }
+
+  .greeksalad_link {
+    color: #333;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+  }
